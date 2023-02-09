@@ -16,7 +16,7 @@ export default function LogIn({navigation}) {
   const [password, setPassword] = useState('');
 
   const transfer = () => {
-    if (email === '' && password === '') {
+    if (email === '' || email===null && password === '' || password===null) {
       Alert.alert('Thank You! You have successfully Log in');
       navigation.navigate('Home');
     } else {
